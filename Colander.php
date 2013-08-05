@@ -1,16 +1,16 @@
 <?php
 //--------------------------------------------------
-// Filter Class                                   |
+// Colander Class                                   |
 //--------------------------------------------------
 //Author: Josh Glendenning
 //--------------------------------------------------
 
-class Filter {
+class Colander {
 
     //--------------------------------------------------
     // Constructor                                    |
     //--------------------------------------------------
-    // To instantiate, use $filter = new Filter($this)
+    // To instantiate, use $colander = new Colander($this)
     // The $condmode argument tells the filter what to do with
     //  fields that have a disabled cond. Current options:
     //      -'strict': Use '=' cond by default.
@@ -131,7 +131,7 @@ class Filter {
                     }
                     $conditions[$model.'.'.$col.' '.$cond] = $val;
                 } else {
-                    throw new InvalidArgumentException("Filter's condmode argument only accepts strings 'loose' or 'strict'.");
+                    throw new InvalidArgumentException("Colander's condmode argument only accepts strings 'loose' or 'strict'.");
                 }
             }
         }
